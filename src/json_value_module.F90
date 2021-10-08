@@ -7872,11 +7872,11 @@
                         ! [note: this uses 1-based indices]
                         call integer_to_string(i,int_fmt,istr)
                         if (consecutive_arrays) then
-                            call add_to_path(start_array//trim(adjustl(istr))//end_array,CK_'')
+                            call add_to_path(start_array//trim(adjustl(istr))//end_array)
                         else
                             call add_to_path(start_array//single_quote//parent_name//&
                                              single_quote//end_array//&
-                                             start_array//trim(adjustl(istr))//end_array,CK_'')
+                                             start_array//trim(adjustl(istr))//end_array)
                         end if
                     case(2_IK)
                         ! rfc6901
@@ -7911,7 +7911,7 @@
                         select case(json%path_mode)
                         case(3_IK)
                             call add_to_path(start_array//single_quote//name//&
-                                            single_quote//end_array,CK_'')
+                                            single_quote//end_array)
                         case default
                             call add_to_path(name,path_sep)
                         end select
@@ -7933,7 +7933,7 @@
                 select case(json%path_mode)
                 case(3_IK)
                     call add_to_path(start_array//single_quote//name//&
-                                     single_quote//end_array,CK_'')
+                                     single_quote//end_array)
                 case default
                     call add_to_path(name,path_sep)
                 end select

@@ -57,8 +57,8 @@
     character(kind=CK,len=*),parameter :: dot             = CK_'.'  !! path separator for [[json_get_by_path_default]]
     character(kind=CK,len=*),parameter :: tilde           = CK_'~'  !! RFC 6901 escape character
     character(kind=CK,len=*),parameter :: single_quote    = CK_"'"  !! for JSONPath bracket-notation
-    character(kind=CK,len=*),parameter :: slash           = CK_'/'  !! JSON special character
-    character(kind=CK,len=*),parameter :: backslash       = CK_'\'  !! JSON special character
+    character(kind=CK,len=*),parameter :: slash           = achar(47, kind=CK) !! JSON special character
+    character(kind=CK,len=*),parameter :: backslash       = achar(92, kind=CK) !! JSON special character
     character(kind=CK,len=*),parameter :: quotation_mark  = CK_'"'  !! JSON special character
     character(kind=CK,len=*),parameter :: bspace          = achar(8,  kind=CK) !! JSON special character
     character(kind=CK,len=*),parameter :: horizontal_tab  = achar(9,  kind=CK) !! JSON special character
